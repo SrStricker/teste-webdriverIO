@@ -1,2 +1,2 @@
 # teste-webdriverIO
-Testes mobildes com webDriver
+Testes mobiles com webDriver
