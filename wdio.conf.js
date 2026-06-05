@@ -51,7 +51,7 @@ export const config = {
     // https://saucelabs.com/platform/platform-configurator
     //
     capabilities: [
-        {
+        /* {
             // configurações para aplicação hibrida
             platformName: 'Android',
             browserName: 'Chrome',
@@ -60,6 +60,14 @@ export const config = {
             'appium:automationName': 'UiAutomator2',
             'appium:chromedriverAutodownload': true,
             'appium:chromedriverExecutable': 'chromedriver-mobile/chromedriver.exe'
+        }, */
+
+        {
+            "platformName": "Android",
+            "appium:automationName": "UiAutomator2",
+            "appium:deviceName": "Medium Phone",
+            "appium:platformVersion": "17.0",
+            "appium:app": "app/wdio.apk"
         }
     ],
 
