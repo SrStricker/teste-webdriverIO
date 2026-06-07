@@ -26,21 +26,21 @@ class loginPage {
     async abrirMenu() {
         await this.menuLogin.click()
     }
-    async preencherLogin() {
+    async preencherLogin(email, senha) {
         //melhorar método
-        await this.campoEmail.setValue('luciano@teste.com')
-        await this.campoSenha.setValue('12345678')
-        await this.botaoLogin.click()
-    }
-    async preencherLoginInvalido() {
-
-        await this.campoEmail.setValue('luciano@teste')
-        await this.campoSenha.setValue('12345678')
+        await this.campoEmail.clearValue()
+        await this.campoEmail.setValue(email)
+        await this.campoSenha.clearValue()
+        await this.campoSenha.setValue(senha)
         await this.botaoLogin.click()
     }
     async mensagemAlerta() {
         return await this.mensagem.getText()
     }
-}
+    async mensagemErro(texto) {
+        const elemento = $(`//android.widget.TextView[@text="${texto}"]`)
+        await expect(elemento).toHaveText(texto)
+    }
 
+}
 export default new loginPage();
