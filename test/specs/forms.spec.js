@@ -20,7 +20,7 @@ describe('funcionalidade tela de formulário', () => {
 
     });
 
-    it.only('deve trocar o botão de on para off', async () => {
+    it('deve trocar o botão de on para off', async () => {
         //Botão on
         const OnOff = await driver.$("accessibility id:switch");
         await OnOff.click();
