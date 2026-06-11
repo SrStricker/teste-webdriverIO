@@ -6,11 +6,15 @@ describe('funcionalidade login', () => {
         await loginPage.abrirMenu()
     });
 
+    afterEach(async () => {
+        await browser.relaunchActiveApp()   /* função de reiniciar o app */
+    });
+
     it('deve fazer login com sucesso', async () => {
 
         await loginPage.preencherLogin('luciano@teste.com', '12345678')
         expect(await loginPage.mensagemAlerta()).toEqual('You are logged in!')
-        await loginPage.botaoOk.click()   /* função de aceitar alertas */
+        //await loginPage.botaoOk.click()   /* função de aceitar alertas */
 
     });
 

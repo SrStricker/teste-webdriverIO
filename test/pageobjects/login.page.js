@@ -15,12 +15,6 @@ class loginPage {
     get mensagem() {
         return $('id=android:id/message')
     }
-    get mensagemErro() {
-        return $('~new UiSelector().text("Please enter a valid email address")')
-    }
-    get botaoOk() {
-        return $('id=android:id/button1')
-    }
 
     //Métodos / Ações
     async abrirMenu() {
